@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		Kupil: <input type="text" id="one"><br>
+		Prodal: <input type="text" id="two"><br>
+		<button onclick="calc()">Click</button>
+
+		<div style="width: 100px; height: 40px; margin-top: 15px; font-size: 30px; color: white;" id="res"></div>
+
+		<script type="text/javascript">
+			function calc() {
+				console.log("test");
+				var one = document.getElementById("one").value;
+				var two = document.getElementById("two").value;
+				var result = false;
+				var sum = (two*100)/one;
+				var color = 'red';
+
+				if (sum >= 30) {
+					result = true;
+				}
+
+				if (result) {
+					color = 'limegreen';
+				}
+
+				document.getElementById("res").style.backgroundColor = color;
+
+				document.getElementById("res").innerHTML = sum + "%";
+			}
+		</script>
+	</body>
+</html>
