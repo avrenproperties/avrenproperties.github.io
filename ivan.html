@@ -11,9 +11,13 @@
 
 		<div style="width: 100px; height: 40px; margin-top: 15px; font-size: 30px; color: white;" id="res"></div>
 
+		<div id="counter" style="display: none">
+			<script src="http://services.webestools.com/cpt_pages_views/47013-9-4.js"></script>
+		</div>
+
 		<script type="text/javascript">
+
 			function calc() {
-				console.log("test");
 				var one = document.getElementById("one").value;
 				var two = document.getElementById("two").value;
 				var result = false;
@@ -29,8 +33,9 @@
 				}
 
 				document.getElementById("res").style.backgroundColor = color;
-
 				document.getElementById("res").innerHTML = sum + "%";
+
+				document.getElementById("counter").style.display = "block";
 			}
 		</script>
 	</body>
